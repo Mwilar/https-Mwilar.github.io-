@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodwell Mwila's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rodwell Mwila</h1>
+        <p>sample Skills and Projects</p>
+        <nav>
+            <ul>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-container">
+            <div class="skill">
+                <h3>Computer Skills & Office Practice</h3>
+                <p>Proficient in various computer applications, office procedures, and organizational tools.</p>
+            </div>
+            <div class="skill">
+                <h3>Presentation & Documentation</h3>
+                <p>Experienced in preparing presentations and simplified briefs to convey complex information.</p>
+            </div>
+            <div class="skill">
+                <h3>Web Design & Management</h3>
+                <p>Skilled in designing, developing, and managing websites for various purposes.</p>
+            </div>
+            <div class="skill">
+                <h3>Disaster Preparedness</h3>
+                <p>Expertise in disaster management, creating emergency documentation, and training others.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+            <a href="project1.html" class="project">
+                <h3>Website for Local Congregation</h3>
+                <p>Designed and managed a website to share news, event updates, and resources.</p>
+            </a>
+            <a href="project2.html" class="project">
+                <h3>Disaster Response Plan Documentation</h3>
+                <p>Developed comprehensive documentation for disaster response, including guidelines and checklists.</p>
+            </a>
+            <a href="project3.html" class="project">
+                <h3>Presentation for Regional Assembly</h3>
+                <p>Created and presented simplified information briefs for a regional assembly.</p>
+            </a>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you would like to discuss opportunities or have any questions, please get in touch:</p>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Rodwell Mwila. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var name = encodeURIComponent(document.getElementById('name').value);
+            var email = encodeURIComponent(document.getElementById('email').value);
+            var message = encodeURIComponent(document.getElementById('message').value);
+            
+            var whatsappNumber = 'YOUR_PHONE_NUMBER'; // Replace with your WhatsApp number including country code
+            var whatsappMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+            var whatsappURL = `https://wa.me/${260764548778}?text=${whatsappMessage}`;
+            
+            window.open(whatsappURL, '_blank');
+        });
+    </script>
+</body>
+</html>
